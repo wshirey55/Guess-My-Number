@@ -1,3 +1,4 @@
 ﻿  Source.cpp
-  test.vcxproj -> E:\C++ Projects\HelloWorld\test\Debug\test.exe
-  test.vcxproj -> E:\C++ Projects\HelloWorld\test\Debug\test.pdb (Partial PDB)
+e:\c++ projects\guess my number\test\test\source.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  test.vcxproj -> E:\C++ Projects\Guess My Number\test\Debug\test.exe
+  test.vcxproj -> E:\C++ Projects\Guess My Number\test\Debug\test.pdb (Partial PDB)

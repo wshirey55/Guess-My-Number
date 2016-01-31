@@ -8,42 +8,65 @@ using namespace std;
 
 int main()
 {
-	srand(static_cast<unsigned int>(time(0)));
+	
 
-	int secretNumber = rand() % 100 + 1;
+	srand(time(NULL));
 	int  tries = 0;
 	int guess;
-	int input;
-	
+	int input = 1;
+	int secretNumber;
 
 
 	cout << "\tWelcome to Guess My Number\n\n";
 
-
-	do
+	if (input == 1)
 	{
-		cout << "Enter a guess: ";
-		cin >> guess;
-		++tries;
-
-		if (guess > secretNumber)
+		secretNumber = rand() % 100 + 1;
+		do
 		{
-			cout << "Too High!\n\n";
-		}
+			
+			
 
-		else if (guess < secretNumber)
-		{
-			cout << "TOO low!\n\n";
-		}
+			cout << "\nEnter a guess: ";
+			cin >> guess;
+			++tries;
+			
+			if (guess > secretNumber)
+			{
+				cout << "Too High!\n\n";
+			}
 
-		else
-		{
-			cout << "\nThat's it! You got it in " << tries << " guesses!";
-			cin >> input;
-		}
+			else if (guess < secretNumber)
+			{
+				cout << "TOO low!\n\n";
+			}
 
-	}	while (guess != secretNumber);
+			else
+			{
+				cout << "\nThat's it! You got it in " << tries << " guesses!";
+				cout << "\nPlay Again? Press 1 for Yes or 2 for No: ";
+				cin >> input;
 
+
+				tries = 0;
+				secretNumber = rand() % 100 + 1;
+
+
+				if (input == 2)
+				{
+					return 0;
+				}
+
+
+			}
+
+		} while (input != 2);
+	}
+
+	else
+	{
 		return 0;
+	}
+
 	}
 
